@@ -1,14 +1,39 @@
+
 <div class="container">
-    <h1>Hero Form</h1>
+  {{diagnostic}}
+    <h3>Hero Form</h3>
     <form>
       <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required>
+        <label for="name">项目名</label>
+        <input type="text"
+            [(ngModel)]="model.name"  
+            class="form-control" 
+            name="name"
+            id="name" 
+            required
+            #spy>
+             <small id="emailHelp" class="form-text text-muted">{{model.name}}</small>
+             <small id="emailHelp" class="form-text text-muted">{{spy.className}}</small>
+      </div>
+
+      <div class="form-group">
+        <label for="sourcelanguage">源语言</label>
+        <select class="form-control" 
+                  id="sourcelanguage"
+                  name="source_language"
+                  required
+                  [(ngModel)]="model.source_language" >
+          <option *ngFor="let languange of languages" [value]="languange">{{languange}}</option>
+        </select>
       </div>
       <div class="form-group">
-        <label for="alterEgo">Alter Ego</label>
-        <input type="text" class="form-control" id="alterEgo">
+        <label for="amount">数量</label>
+        <input type="number" 
+              [(ngModel)]="model.amount"
+              name="amount"
+              class="form-control" 
+              id="amount">
       </div>
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-success">提交</button>
     </form>
 </div>

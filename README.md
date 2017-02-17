@@ -34,7 +34,7 @@ child and sibling routes.
 
 1. 创建标题栏 header(组件) 
 2. 创建导航栏 nav(组件)
-3. 创建项目模块 project <-- 第一次提交
+3. 创建项目模块 project 
 ==========================
 4. 创建项目表单
 4.1 创建 project 模型类
@@ -45,4 +45,7 @@ child and sibling routes.
     amount : 数量
     description: 描述
 4.2 创建 project-form 组件
-4.3 在 module 文件中引入 FormsModule
+4.3 在 module 文件中引入 FormsModule <-- 第一次提交
+4.4 使用 [(ngModel)] 双向数据绑定
+4.5 看一看 ng-touched ng-untouched ng-dirty ng-pristine ng-valid ng-invalid  
+4.6 添加 校验样式 <-- 第二次提交
